@@ -6,7 +6,7 @@ WordPress React Boilerplate is a boilerplate plugin for WordPress that enables a
 
 - Separation of admin and frontend areas 
 - React integration for admin and frontend components 
-- classmap autoloading 
+- psr 4 autoloading 
 - Hook registration for admin and frontend 
 - Shortcodes for the frontend areaet.
 
