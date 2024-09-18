@@ -13,9 +13,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-use MyPluginNamespace\Activate;
 use MyPluginNamespace\Core_Init;
-use MyPluginNamespace\Deactivate;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -36,17 +34,8 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
-function my_plugin_activate(): void {
-	Activate::activate();
-}
-
-register_activation_hook( __FILE__, 'my_plugin_activate' );
-
-function my_plugin_deactivate(): void {
-	Deactivate::deactivate();
-}
-
-register_deactivation_hook( __FILE__, 'my_plugin_deactivate' );
+register_activation_hook( __FILE__, [ 'MyPluginNamespace\Activate', 'activate' ] );
+register_deactivation_hook( __FILE__, [ 'MyPluginNamespace\Deactivate', 'deactivate' ] );
 
 function my_plugin_load_textdomain(): void {
 	load_plugin_textdomain( 'my-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
