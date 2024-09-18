@@ -7,7 +7,7 @@ read -p "Plugin Name (Replace My Plugin Name): " plugin_name
 read -p "Plugin Namespace Name (Replace MyPluginNamespace): " namespace_name
 read -p "Plugin Defined Name (Replace MY_PLUGIN): " plugin_defined_name
 read -p "Plugin Slug Name (Replace my-plugin): " plugin_slug_name
-read -p "Plugin Slug Prefix Name (Replace my_plugin_name_): " plugin_prefix_name
+read -p "Plugin Slug Prefix Name (Replace my_plugin_): " plugin_prefix_name
 
 # Pfad zum Unterordner
 plugin_dir="./my-plugin"
