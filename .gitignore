@@ -38,6 +38,7 @@ intermediate
 cache
 vendor
 my-plugin/package-lock.json
+my-plugin/composer.lock
 
 # Files to ignore
 composer.lock
