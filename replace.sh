@@ -17,7 +17,7 @@ replace_string() {
   local suche=$1
   local ersetze=$2
   local pfad="$plugin_dir" # Pfad zum Unterordner
-  grep -rl --exclude="*.sh" --exclude="*.json" --exclude="*.md" --exclude="*.txt" "$suche" "$pfad" | xargs sed -i '' "s|$suche|$ersetze|g"
+  grep -rl --exclude="*.sh" --exclude="*.md" --exclude="*.txt" "$suche" "$pfad" | xargs sed -i '' "s|$suche|$ersetze|g"
 }
 
 if [[ -z $plugin_name ]]; then

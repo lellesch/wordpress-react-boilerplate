@@ -16,6 +16,7 @@
     "sass-loader": "^16.0.1"
   },
   "scripts": {
+    "makepot": "wp i18n make-pot . languages/$(basename $PWD).pot --skip-js --exclude=src,vendor,node_modules && wp i18n make-pot . languages/js.pot --skip-php --include=src/js && wp i18n make-pot . languages/$(basename $PWD).pot --merge=languages/js.pot --exclude=src,vendor,node_modules",
     "build:admin": "wp-scripts build src/admin/index.js --output-path=assets/admin/build",
     "build:public": "wp-scripts build src/public/index.js --output-path=assets/public/build",
     "build": "npm-run-all build:admin build:public",
