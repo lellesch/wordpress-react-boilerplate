@@ -47,3 +47,5 @@ build
 /my-plugin/node_modules/
 .idea/
 /.idea/*
+.idea/inspectionProfiles/Project_Default.xml
+.idea/php.xml
