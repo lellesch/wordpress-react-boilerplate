@@ -35,13 +35,15 @@ dwsync.xml
 .svn
 .CVS
 intermediate
-.idea
 cache
 vendor
-/.idea
 
 # Files to ignore
 composer.lock
 /vendor/
 build
 /wp-plugin-name/node_modules/
+/my-plugin/build-release/
+/my-plugin/node_modules/
+.idea/
+/.idea
