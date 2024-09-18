@@ -45,10 +45,10 @@ fi
 replace_string "my-plugin" "${plugin_slug_name}"
 
 if [[ -z $plugin_prefix_name ]]; then
-  plugin_prefix_name="my_plugin_name_"
+  plugin_prefix_name="my_plugin_"
 fi
 
-replace_string "my_plugin_name_" "${plugin_prefix_name}"
+replace_string "my_plugin_" "${plugin_prefix_name}"
 
 # Umbenennen der Haupt-Plugin-Datei
 mv "${plugin_dir}/my-plugin.php" "${plugin_dir}/${plugin_slug_name}.php"

@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'MY_PLUGIN_NAME', 'my-plugin-name' );
-define( 'MY_PLUGIN_PREFIX', 'my_plugin_name_' );
+define( 'MY_PLUGIN_NAME', 'my-plugin' );
+define( 'MY_PLUGIN_PREFIX', 'my_plugin_' );
 define( 'MY_PLUGIN_VERSION', '1.0.0' );
 define( 'MY_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MY_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ) );
