@@ -46,5 +46,4 @@ build
 /my-plugin/build-release/
 /my-plugin/node_modules/
 .idea/
-/.idea
-/.idea
+/.idea/*
