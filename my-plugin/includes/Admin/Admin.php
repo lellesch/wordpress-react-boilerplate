@@ -50,7 +50,7 @@ class Admin {
 		$asset = include $asset_file;
 
 		wp_enqueue_script(
-			'my-plugin-script',
+			'my-plugin-admin-script',
 			MY_PLUGIN_DIR_URL . 'assets/admin/build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
@@ -60,7 +60,7 @@ class Admin {
 		);
 
 		wp_enqueue_style(
-			'my-plugin-style',
+			'my-plugin-admin-script-style',
 			MY_PLUGIN_DIR_URL . 'assets/admin/build/index.css',
 			array_filter(
 				$asset['dependencies'],
@@ -70,6 +70,8 @@ class Admin {
 			),
 			$asset['version'],
 		);
+
+		wp_set_script_translations( 'my-plugin-admin-script', 'my-plugin', MY_PLUGIN_DIR_PATH . 'languages' );
 	}
 
 	/**

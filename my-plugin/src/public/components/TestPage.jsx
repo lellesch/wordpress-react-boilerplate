@@ -6,6 +6,9 @@ import {__} from "@wordpress/i18n";
 
 export const TestPage = () => {
 
+    const translatedText = __( 'Hello, World!', 'my-plugin' );
+    console.log( translatedText );
+
     return (
         <>
             <Heading level={1}>
