@@ -90,7 +90,7 @@ class Frontend {
 		$asset = include $asset_file;
 
 		wp_enqueue_script(
-			'my-plugin-name-public-script',
+			'my-plugin-public-script',
 			MY_PLUGIN_DIR_URL . 'assets/public/build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
@@ -100,7 +100,7 @@ class Frontend {
 		);
 
 		wp_enqueue_style(
-			'my-plugin-name-public-style',
+			'my-plugin-public-style',
 			MY_PLUGIN_DIR_URL . 'assets/public/build/index.css',
 			array_filter(
 				$asset['dependencies'],
@@ -118,6 +118,6 @@ class Frontend {
 	 * @return string The HTML string to embed the React application.
 	 */
 	public function display_shortcode_my_react_app(): string {
-		return ( '<div id="my-plugin-name-frontend"></div>' );
+		return ( '<div id="my-plugin-frontend"></div>' );
 	}
 }
