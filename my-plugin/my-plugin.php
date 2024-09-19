@@ -37,14 +37,4 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 register_activation_hook( __FILE__, [ 'MyPluginNamespace\Activate', 'activate' ] );
 register_deactivation_hook( __FILE__, [ 'MyPluginNamespace\Deactivate', 'deactivate' ] );
 
-function my_plugin_load_textdomain(): void {
-	load_plugin_textdomain( 'my-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-
-add_action( 'plugins_loaded', 'my_plugin_load_textdomain' );
-
-function my_plugin_init(): void {
-	Core_Init::get_instance( MY_PLUGIN_NAME, MY_PLUGIN_PREFIX, MY_PLUGIN_VERSION );
-}
-
-add_action( 'plugins_loaded', 'my_plugin_init' );
+Core_Init::get_instance( MY_PLUGIN_NAME, MY_PLUGIN_PREFIX, MY_PLUGIN_VERSION );
