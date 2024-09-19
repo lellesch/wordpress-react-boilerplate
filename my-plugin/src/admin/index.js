@@ -4,7 +4,7 @@ import { createRoot } from '@wordpress/element';
 import { SettingsPage } from './components/SettingsPage';
 
 domReady(() => {
-    const adminContainer = document.getElementById('my-plugin-name-settings');
+    const adminContainer = document.getElementById('my-plugin-settings');
 
     if (adminContainer) {
         const root = createRoot(adminContainer);
