@@ -50,7 +50,7 @@ class Admin {
 		$asset = include $asset_file;
 
 		wp_enqueue_script(
-			'my-plugin-name-script',
+			'my-plugin-script',
 			MY_PLUGIN_DIR_URL . 'assets/admin/build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
@@ -60,7 +60,7 @@ class Admin {
 		);
 
 		wp_enqueue_style(
-			'my-plugin-name-style',
+			'my-plugin-style',
 			MY_PLUGIN_DIR_URL . 'assets/admin/build/index.css',
 			array_filter(
 				$asset['dependencies'],
@@ -112,8 +112,8 @@ class Admin {
 	 */
 	public function display_options_page(): void {
 		printf(
-			'<div class="wrap" id="my-plugin-name-settings">%s</div>',
-			esc_html__( 'Loading…', 'my-plugin-name' )
+			'<div class="wrap" id="my-plugin-settings">%s</div>',
+			esc_html__( 'Loading…', 'my-plugin' )
 		);
 	}
 }
