@@ -28,6 +28,8 @@ class Core_Init {
 		$this->plugin_prefix = $plugin_prefix;
 		$this->version       = $version;
 
+		add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
+
 		if ( is_admin() ) {
 			$this->define_admin_hooks();
 		} else {
@@ -63,5 +65,9 @@ class Core_Init {
 
 	private function load_rest_api(): void {
 		new Rest_Api();
+	}
+
+	public function load_textdomain(): void {
+		load_plugin_textdomain( 'my-plugin', false, dirname( MY_PLUGIN_BASENAME ) . '/languages' );
 	}
 }
