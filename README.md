@@ -33,7 +33,13 @@ The project contains a shell script (`replace.sh`) that replaces the placeholder
 
 ## Step-by-Step Guide for Translation Process
 
-### Step 1: Create the .pot file
+### Step 1: Start build so that the build code is created
+   ```bash
+   npm run build
+   ```
+
+
+### Step 2: Create the .pot file
 
 1. Open your console/terminal and run the command to generate the `.pot` files:
    ```bash
@@ -44,7 +50,7 @@ The project contains a shell script (`replace.sh`) that replaces the placeholder
    - The generated `.pot` files for Admin and Public are merged with the main `.pot` file.
    - The temporary `.pot` files are deleted after merging.
 
-### Step 2: Load the .pot file in Poedit
+### Step 3: Load the .pot file in Poedit
 
 1. Open **Poedit** (or any other translation tool).
 2. Select the generated `.pot` file from the `languages` directory of your plugin, for example:
@@ -53,7 +59,7 @@ The project contains a shell script (`replace.sh`) that replaces the placeholder
    ```
 3. Load the `.pot` file in Poedit to start translating.
 
-### Step 3: Save the translation
+### Step 4: Save the translation
 
 1. Translate all necessary text strings in Poedit.
 2. Once the translation is complete, save the file as a `.po` file for the desired language, e.g.:
@@ -61,7 +67,7 @@ The project contains a shell script (`replace.sh`) that replaces the placeholder
    languages/my-plugin-de_DE.po
    ```
 
-### Step 4: Generate the .json files for JavaScript translations
+### Step 5: Generate the .json files for JavaScript translations
 
 1. After saving the translation as a `.po` file, run the `makejson` command to generate the `.json` files:
    ```bash
