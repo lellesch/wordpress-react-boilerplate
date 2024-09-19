@@ -110,6 +110,8 @@ class Frontend {
 			),
 			$asset['version'],
 		);
+
+		wp_set_script_translations( 'my-plugin-public-script', 'my-plugin', MY_PLUGIN_DIR_PATH . 'languages' );
 	}
 
 	/**
