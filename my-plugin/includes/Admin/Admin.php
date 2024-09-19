@@ -97,10 +97,10 @@ class Admin {
 	 */
 	public function add_react_settings_page(): void {
 		add_options_page(
-			__( 'Plugin Settings', 'my-plugin-name' ),
-			__( 'My React Plugin', 'my-plugin-name' ),
+			__( 'Plugin Settings', 'my-plugin' ),
+			__( 'My React Plugin', 'my-plugin' ),
 			'manage_options',
-			'my-plugin-name-settings',
+			'my-plugin-settings',
 			array( $this, 'display_options_page' )
 		);
 	}
