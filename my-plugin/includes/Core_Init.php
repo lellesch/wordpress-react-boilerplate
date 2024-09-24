@@ -30,13 +30,10 @@ class Core_Init {
 
 		add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
 
-		if ( is_admin() ) {
-			$this->define_admin_hooks();
-		} else {
-			$this->define_public_hooks();
-		}
-
 		$this->load_rest_api();
+		$this->define_admin_hooks();
+		$this->define_public_hooks();
+
 	}
 
 	private function define_admin_hooks(): void {
