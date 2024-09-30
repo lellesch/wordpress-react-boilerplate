@@ -1,13 +1,8 @@
 {
     "autoload": {
-        "classmap": [
-          "includes/"
-        ]
-    },
-    "autoload-dev": {
-        "classmap": [
-          "includes/"
-        ]
+        "psr-4": {
+            "MyPluginNamespace\\": "includes/"
+        }
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
